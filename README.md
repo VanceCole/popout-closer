@@ -4,6 +4,8 @@ Allows macros to emit a socket event requesting all players to close windows, fo
 - Or pass an array of window types you want to be closed
 
 # Example Macros
+If you only want players to have windows closed:
+
 ```js
 // Request players close all windows
 game.socket.emit('module.popout-closer', { targets: 'all' })
