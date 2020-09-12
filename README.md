@@ -11,11 +11,11 @@ Allows macros to show a popout to only specific players
 
 ```js
 // Request players close all windows
-game.socket.emit('module.popout-closer', { op: 'close', targets: 'all' })
+game.socket.emit('module.popout-tools', { op: 'close', targets: 'all' })
 ```
 ```js
 // Request players close only ImagePopout windows
-game.socket.emit('module.popout-closer', { op: 'close', targets: ['ImagePopout'] })
+game.socket.emit('module.popout-tools', { op: 'close', targets: ['ImagePopout'] })
 ```
 
 If you also want to close windows for the user who runs the macro:
@@ -23,14 +23,14 @@ If you also want to close windows for the user who runs the macro:
 ```js
 // Request all players including macro player close all windows
 Object.values(ui.windows).forEach(w => w.close())
-game.socket.emit('module.popout-closer', { op: 'close', targets: 'all' })
+game.socket.emit('module.popout-tools', { op: 'close', targets: 'all' })
 ```
 ```js
 // Request all players including macro player close only ImagePopout windows
 Object.values(ui.windows).forEach(w => {
   if (w.constructor.name === 'ImagePopout') w.close()
 })
-game.socket.emit('module.popout-closer', { op: 'close', targets: ['ImagePopout'] })
+game.socket.emit('module.popout-tools', { op: 'close', targets: ['ImagePopout'] })
 ```
 
 ### Request specific players open popouts
