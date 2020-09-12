@@ -1,4 +1,4 @@
-# Popout Closer
+# Popout Tools
 Allows macros to emit a socket event requesting all players to close windows, for example ImagePopouts
 - Can close all windows indescrimately
 - Or pass an array of window types you want to be closed
