@@ -36,11 +36,12 @@ game.socket.emit('module.popout-closer', { op: 'close', targets: ['ImagePopout']
 ### Request specific players open popouts
 
 ```js
-// Example to show a popout to user named "Haley"
+// Example to show a popout to user named "Steve"
 const userlist = [
   game.users.getName('Steve').id,
-];
-const a = game.actors.getName('Ancient Red Dragon');
+]
+
+const a = game.actors.getName('Ancient Red Dragon')
 
 game.socket.emit('module.popout-tools', {
   users: userlist,
